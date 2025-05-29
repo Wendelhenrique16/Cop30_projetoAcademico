@@ -1,0 +1,190 @@
+/* Define a fonte padrão para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* sem margem padrão */
+    padding: 0; /* sem preenchimento padrão */
+    background-color: #f4f4f4; 
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #fa8072;
+    color: #fff; 
+    text-align: center; /* alinha o texto ao centro */
+    padding: 10px 0; /* drfine o preenchimento superior e inferior */
+}
+
+/* Estilos para a navegação */
+nav ul {
+    list-style-type: none; /* remove os marcadores de lista */
+    padding: 0; 
+}
+
+nav ul li {
+    display: inline; /* faz que os itens aqui fiquem alinhados */
+    margin-right: 20px; /* aqui os espaçamentos  */
+}
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none; /* sem sublinhado para os links */
+}
+
+/* main aqui */
+main {
+    padding: 20px; /* preenchimetno ao redor do principal */
+}
+
+#intro, #about, #contact {
+    margin-bottom: 20px; /* um espaço debaixo das seções */
+}
+
+/* Estilos para a seção de chamada para ação */
+#call-to-action {
+    background-color: #f9f9f9;
+    padding: 20px; 
+    border-radius: 8px; /* Borda arredondada, denovo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 20px; 
+}
+
+/* Estilos para os artigos destacados */
+#highlights, #gallery {
+    display: flex; /* Altera o layout para flexbox */
+    justify-content: space-around; /* Alinha os itens igualmente espaçados */
+    background-color: #b2443a; /* Cor de fundo do container */
+    color: #fff; /* Cor do texto */
+}
+
+#highlights article, #gallery .image-container img {
+    flex: 1; 
+    margin: 0 10px; 
+    max-width: 300px; 
+}
+
+#highlights article {
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    background-color: #fff;
+    margin-bottom: 20px; 
+}
+
+#highlights h3 {
+    color: #333; 
+    margin-top: 0; 
+}
+
+#highlights p {
+    color: #666; 
+}
+#gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+.audio-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.audio-container audio {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+#highlights article img {
+    max-width: 100%; /* o maximo do tamanho da imagem em relação ao conteiner */
+    height: auto; 
+    object-fit: cover; /*  imagem cobre completamente o espaço */
+}
+
+
+
+#call-to-action h2 {
+    color: #333;
+    margin-top: 0; 
+}
+
+#call-to-action p {
+    color: #666; 
+    margin-bottom: 10px; 
+}
+
+#call-to-action ul {
+    list-style-type: none;
+    padding: 0; 
+}
+
+#call-to-action li {
+    margin-bottom: 10px; 
+}
+
+#call-to-action a, #previous-cops a {
+    color: #007bff; /* cor dos links */
+    text-decoration: none; /* remove o sublinhado dos links */
+    transition: color 0.3s; /* adiciona uma transição suave na cor do link */
+}
+
+#call-to-action a:hover, #previous-cops a:hover  {
+    color: #D87DAB; /* altera a cor do link ao passar o mouse,supostamente, e é rosa */
+}
+
+/* Estilos para links em seções específicas */
+#previous-cops a {
+    color: #007bff; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+/* Estilos para a classe COP */
+.COP {
+    text-align: justify; /* justifica o texto, mas acho que eu nao precisava explicar isso */
+}
+
+.COP img {
+    width: 100%; /* define a largura da imagem como 100% */
+    height: auto; /* altura automática */
+    display: block; /* define a imagem como bloco */
+    margin: 0 auto; /* centraliza horizontalmente */
+}
+
+/* Estilos para o contêiner da classe COP */
+.COP-container {
+    position: relative; /* define a posição do contêiner */
+    display: inline-block; /* define o elemento como bloco */
+}
+
+/* Estilos para o texto sobreposto na classe COP */
+.texto-sobreposto {
+    position: absolute; 
+    top: 0; /* elemento no topo do contêiner pai */
+    left: 0; /* Posiciona o elemento centralizado no contêiner pai */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px; 
+    visibility: hidden; 
+    opacity: 0; 
+    transition: opacity 0.3s;  
+}
+
+/* Estilos para mostrar o texto sobreposto ao passar o mouse */
+.COP-container:hover .texto-sobreposto {
+    visibility: visible; /* Torna o texto visível */
+    opacity: 1; /* Torna o texto completamente visível */
+}
