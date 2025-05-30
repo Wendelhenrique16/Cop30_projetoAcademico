@@ -1,25 +1,582 @@
-:root{
-    --cor-primaria: #F2E7DC;
-    --cor-secundaria: #038C7F;
-    --cor-terciaria: #027373;
-    --cor-quarternaria: #A9D9D0;
-    --cor--quinaria: #0D0D0D;
-
-
-
-}
-
-/* Base Styles */
+/* Estilos Gerais e Reset */
 body {
-    background-color: var(--cor-primaria);
     font-family: Arial, sans-serif;
-    margin: 0; /* Ensures no default margin from the browser */
-    padding: 0; /* Ensures no default padding from the browser */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Adicione mais estilos gerais aqui */
 }
 
-@media (max-width: 1200px) {
- body{
-    width: 90%;
- }
+html {
+    scroll-behavior: smooth; /* Para rolagem suave nos links âncora */
+}
 
+/* --- Cabeçalho (Header) --- */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* ou fixed, dependendo do efeito desejado */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* --- Navegação Principal (Main Nav) --- */
+.main-nav {
+    /* Estilos para o elemento nav */
+}
+
+.main-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav__item {
+    margin-left: 1.5rem;
+}
+
+.main-nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav__link:hover {
+    color: #ffd700; /* Exemplo de cor ao passar o mouse */
+}
+
+/* --- Conteúdo Principal (Main Content) --- */
+.main-content {
+    /* Estilos gerais para o container principal de conteúdo */
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* --- Seção de Introdução (#intro) --- */
+.introduction {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin-bottom: 2rem;
+}
+
+.introduction__title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.introduction__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* --- Seção de Destaques (#highlights) --- */
+.highlights {
+    padding: 3rem 0;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.highlights__title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.highlights__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.highlight-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-card__link {
+    display: block; /* Para que a imagem seja clicável em toda a sua área */
+    text-decoration: none;
+}
+
+.highlight-card__image {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens dos cards */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+.highlight-card__title {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 1rem;
+    margin-top: 0;
+}
+
+.highlight-card__text {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 1rem 1rem;
+    line-height: 1.5;
+}
+
+/* --- Seção Sobre a COP (#about) --- */
+.about-section {
+    padding: 3rem 0;
+    background-color: #eaf7f7; /* Cor de fundo suave */
+    margin-bottom: 2rem;
+}
+
+.about-section__title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-section__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Seção O que é a COP (#cop-info) --- */
+.cop-info-section {
+    padding: 3rem 0;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.cop-definition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cop-definition__image-container {
+    position: relative;
+    width: 100%; /* Ajuste conforme necessário */
+    max-width: 500px; /* Limita a largura da imagem */
+    margin-bottom: 1.5rem;
+}
+
+.cop-definition__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texto-sobreposto {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.texto-sobreposto__text {
+    margin: 0;
+}
+
+.cop-info-section__title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.cop-info-section__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* --- Seção COPs Anteriores (#previous-cops) --- */
+.previous-cops-section {
+    padding: 3rem 0;
+    background-color: #f8f8f8;
+    margin-bottom: 2rem;
+}
+
+.previous-cops-section__title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.previous-cops-section__intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.previous-cops-section__list {
+    list-style: disc;
+    margin: 0 auto;
+    padding-left: 2rem;
+    max-width: 800px;
+    color: #555;
+}
+
+.previous-cops-section__item {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.previous-cops-section__link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.previous-cops-section__link:hover {
+    text-decoration: underline;
+}
+
+/* --- Seção COP 30 em Belém (#COP30-info) --- */
+.cop30-section {
+    padding: 3rem 0;
+    background-color: #eaf7f7;
+    margin-bottom: 2rem;
+}
+
+.cop30-section__title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cop30-section__subtitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.cop30-section__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cop30-section__list {
+    list-style: disc;
+    margin: 0 auto;
+    padding-left: 2rem;
+    max-width: 800px;
+    color: #555;
+}
+
+.cop30-section__item {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.cop30-section__link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.cop30-section__link:hover {
+    text-decoration: underline;
+}
+
+/* --- Seção da Galeria (#gallery) --- */
+.gallery-section {
+    padding: 3rem 0;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.gallery-section__title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-section__image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-section__image-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-section__image-link:hover {
+    transform: scale(1.03);
+}
+
+.gallery-section__image {
+    width: 100%;
+    height: 180px; /* Altura fixa para imagens da galeria */
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-section__audio-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.gallery-section__audio-description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.gallery-section__audio-player {
+    width: 100%;
+    max-width: 400px; /* Limita a largura do player de áudio */
+    margin: 0 auto;
+    display: block;
+}
+
+/* --- Seção de Projetos e Iniciativas (#actions) --- */
+.projects-section {
+    padding: 3rem 0;
+    background-color: #f8f8f8;
+    margin-bottom: 2rem;
+}
+
+.projects-section__main-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card__title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.project-card__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.project-card__link {
+    display: block;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.project-card__image {
+    width: 100%;
+    height: 250px; /* Altura fixa para a imagem do projeto */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-card__video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Proporção de vídeo 16:9 */
+    height: 0;
+    margin-top: 1.5rem;
+}
+
+.project-card__video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* --- Seção Chamada para Ação (#call-to-action) --- */
+.call-to-action-section {
+    padding: 3rem 0;
+    background-color: #d4edda; /* Um verde claro para destacar */
+    color: #28a745;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.call-to-action-section__title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.call-to-action-section__text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #218838;
+}
+
+.call-to-action-section__list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 700px;
+    text-align: left;
+}
+
+.call-to-action-section__item {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.call-to-action-section__item-text {
+    margin-bottom: 0.5rem;
+}
+
+.call-to-action-section__sublist {
+    list-style: circle;
+    padding-left: 2rem;
+}
+
+.call-to-action-section__subitem {
+    margin-bottom: 0.5rem;
+}
+
+.call-to-action-section__link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.call-to-action-section__link:hover {
+    text-decoration: underline;
+}
+
+/* --- Rodapé (Footer) --- */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+.footer__text {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.footer__back-to-top {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer__back-to-top:hover {
+    color: #fff;
+}
+
+/* --- Media Queries para Responsividade (Exemplo Básico) --- */
+@media (max-width: 768px) {
+    .header__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav__list {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .main-nav__item {
+        margin: 0.5rem 0;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .highlights__grid,
+    .gallery-section__image-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .cop-definition {
+        padding: 0 1rem; /* Adiciona padding para o conteúdo */
+    }
 }
