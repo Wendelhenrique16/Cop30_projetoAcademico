@@ -1,10 +1,18 @@
+:root {
+    --cor-primaria: #ffe6a7;
+    --cor-secundaria: #6f1d1b;
+    --cor-destaque: #bb9457;
+    --cor-escura: #432818;
+    --cor-media: #99582a;
+}
+
 /* Estilos Gerais e Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Adicione mais estilos gerais aqui */
+
 }
 
 html {
@@ -13,10 +21,10 @@ html {
 
 /* --- Cabeçalho (Header) --- */
 .header {
-    background-color: #333;
+    background-color: var(--cor-secundaria);
     color: #fff;
     padding: 1rem 0;
-    position: sticky; /* ou fixed, dependendo do efeito desejado */
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -60,7 +68,7 @@ html {
 }
 
 .main-nav__link:hover {
-    color: #ffd700; /* Exemplo de cor ao passar o mouse */
+    color: #ffd700;
 }
 
 /* --- Conteúdo Principal (Main Content) --- */
@@ -75,7 +83,7 @@ html {
 .introduction {
     padding: 3rem 0;
     text-align: center;
-    background-color: #f8f8f8;
+    background-color: var(--cor-primaria);
     margin-bottom: 2rem;
 }
 
@@ -125,19 +133,19 @@ html {
 }
 
 .highlight-card__link {
-    display: block; /* Para que a imagem seja clicável em toda a sua área */
+    display: block; 
     text-decoration: none;
 }
 
 .highlight-card__image {
     width: 100%;
-    height: 200px; /* Altura fixa para as imagens dos cards */
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    height: 200px;
+    object-fit: cover; 
 }
 
 .highlight-card__title {
     font-size: 1.5rem;
-    color: #333;
+    color: var(--cor-secundaria);
     padding: 1rem;
     margin-top: 0;
 }
@@ -152,7 +160,7 @@ html {
 /* --- Seção Sobre a COP (#about) --- */
 .about-section {
     padding: 3rem 0;
-    background-color: #eaf7f7; /* Cor de fundo suave */
+    background-color: #eaf7f7; 
     margin-bottom: 2rem;
 }
 
@@ -234,7 +242,7 @@ html {
 /* --- Seção COPs Anteriores (#previous-cops) --- */
 .previous-cops-section {
     padding: 3rem 0;
-    background-color: #f8f8f8;
+    background-color: var(--cor-primaria);
     margin-bottom: 2rem;
 }
 
@@ -291,7 +299,7 @@ html {
 
 .cop30-section__subtitle {
     font-size: 1.8rem;
-    color: #333;
+    color: var(--cor-secundaria);
     margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -376,7 +384,7 @@ html {
 
 .gallery-section__audio-description {
     font-size: 1.1rem;
-    color: #333;
+    color: var(--cor-secundaria);
     margin-bottom: 1rem;
 }
 
@@ -390,7 +398,7 @@ html {
 /* --- Seção de Projetos e Iniciativas (#actions) --- */
 .projects-section {
     padding: 3rem 0;
-    background-color: #f8f8f8;
+    background-color: var(--cor-primaria);
     margin-bottom: 2rem;
 }
 
@@ -412,7 +420,7 @@ html {
 
 .project-card__title {
     font-size: 1.8rem;
-    color: #333;
+    color: var(--cor-secundaria);
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -490,7 +498,7 @@ html {
 .call-to-action-section__item {
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    color: #333;
+    color: var(--cor-secundaria);
 }
 
 .call-to-action-section__item-text {
