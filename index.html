@@ -3,65 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="stylesheet" href="css/style.css">
- <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>COP 30: Uma Batalha pela Amazônia em Foco</title> <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
-    <header>
-        <h1>COP 30: Uma Batalha pela Amazônia em Foco</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="gallery.html">Galeria</a></li>
-                <li><a href="actions.html">Ações Sustentáveis</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">COP 30: Uma Batalha pela Amazônia em Foco</h1>
+            <nav class="main-nav" aria-label="Navegação Principal"> <ul class="main-nav__list">
+                    <li class="main-nav__item"><a href="index.html" class="main-nav__link">Início</a></li>
+                    <li class="main-nav__item"><a href="about.html" class="main-nav__link">Sobre</a></li>
+                    <li class="main-nav__item"><a href="gallery.html" class="main-nav__link">Galeria</a></li>
+                    <li class="main-nav__item"><a href="actions.html" class="main-nav__link">Ações Sustentáveis</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="intro">
-            <h2>Introdução</h2>
-            <p>A COP 30 marca um momento crucial na história da Amazônia, onde 
-desafios e oportunidades se entrelaçam diante das mudanças climáticas. A região 
-amazônica enfrenta uma batalha pela sobrevivência, e esta conferência busca unir 
-forças para proteger esse tesouro natural.</p>
-            <p>Dados estatísticos revelam um panorama alarmante: o desmatamento, 
-as queimadas e a perda de biodiversidade ameaçam irreversivelmente o ecossistema 
-amazônico. No entanto, há esperança em soluções sustentáveis e na mobilização global 
-pela preservação da Amazônia.</p>
-            <p>Nesta edição da COP, os participantes se dedicarão a discutir estratégias 
-de conservação, promover ações concretas e estabelecer metas ambiciosas para mitigar os 
-impactos das mudanças climáticas na região.</p>
+    <main class="main-content">
+        <section id="intro" class="introduction"> <h2 class="introduction__title">Introdução</h2>
+            <p class="introduction__text">A COP 30 marca um momento crucial na história da Amazônia, onde desafios e oportunidades se entrelaçam diante das mudanças climáticas. A região amazônica enfrenta uma batalha pela sobrevivência, e esta conferência busca unir forças para proteger esse tesouro natural.</p>
+            <p class="introduction__text">Dados estatísticos revelam um panorama alarmante: o desmatamento, as queimadas e a perda de biodiversidade ameaçam irreversivelmente o ecossistema amazônico. No entanto, há esperança em soluções sustentáveis e na mobilização global pela preservação da Amazônia.</p>
+            <p class="introduction__text">Nesta edição da COP, os participantes se dedicarão a discutir estratégias de conservação, promover ações concretas e estabelecer metas ambiciosas para mitigar os impactos das mudanças climáticas na região.</p>
         </section>
 
-        <section id="highlights">
-            <h2>Destaques</h2>
-            <article class="highlight">
-                <a href="https://brasilescola.uol.com.br/biologia/mudancas-climaticas.htm"target="blank">
-                    <img src="img/climate-change.jpg" alt="Mudanças Climáticas">
-                </a>
-                <h3>Mudanças Climáticas</h3>
-                <p>As mudanças climáticas representam uma ameaça existencial 
-para a Amazônia, acelerando processos de degradação e comprometendo sua resiliência. 
-É urgente implementar medidas de adaptação e mitigação para proteger esse ecossistema vital.</p>
-            </article>
-            <article class="highlight">
-                <a href="https://brasilescola.uol.com.br/brasil/o-indigena-no-brasil.htm#:~:text=Os%20povos%20indígenas%20são%20o,uma%20grande%20diversidade%20de%20etnias." target="blank">
-                    <img src="img/indigenous-people.jpg" alt="Povos Indígenas">
-                </a>
-                <h3>Povos Indígenas</h3>
-                <p>Os povos indígenas são guardiões ancestrais da Amazônia, 
-com conhecimentos e práticas sustentáveis que podem orientar estratégias de conservação. 
-É fundamental respeitar e incluir suas vozes nas decisões relacionadas à preservação da floresta.</p>
-
-            </article>
+        <section id="highlights" class="highlights">
+            <h2 class="highlights__title">Destaques</h2>
+            <div class="highlights__grid"> <article class="highlight-card">
+                    <a href="https://brasilescola.uol.com.br/biologia/mudancas-climaticas.htm" target="_blank" rel="noopener noreferrer" class="highlight-card__link"> <img src="img/climate-change.jpg" alt="Ilustração de mudanças climáticas com desmatamento e seca" class="highlight-card__image">
+                    </a>
+                    <h3 class="highlight-card__title">Mudanças Climáticas</h3>
+                    <p class="highlight-card__text">As mudanças climáticas representam uma ameaça existencial para a Amazônia, acelerando processos de degradação e comprometendo sua resiliência. É urgente implementar medidas de adaptação e mitigação para proteger esse ecossistema vital.</p>
+                </article>
+                <article class="highlight-card">
+                    <a href="https://brasilescola.uol.com.br/brasil/o-indigena-no-brasil.htm#:~:text=Os%20povos%20ind%C3%ADgenas%20s%C3%A3o%20o,uma%20grande%20diversidade%20de%20etnias." target="_blank" rel="noopener noreferrer" class="highlight-card__link">
+                        <img src="img/indigenous-people.jpg" alt="Pessoas indígenas em vestes tradicionais em uma floresta" class="highlight-card__image">
+                    </a>
+                    <h3 class="highlight-card__title">Povos Indígenas</h3>
+                    <p class="highlight-card__text">Os povos indígenas são guardiões ancestrais da Amazônia, com conhecimentos e práticas sustentáveis que podem orientar estratégias de conservação. É fundamental respeitar e incluir suas vozes nas decisões relacionadas à preservação da floresta.</p>
+                </article>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 NAP2_Wendel_Henrique</p>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2024 NAP2_Wendel_Henrique</p>
+            <a href="#top" class="footer__back-to-top" aria-label="Voltar ao topo da página">Voltar ao Topo</a> </div>
     </footer>
 </body>
 </html>

@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Galeria da COP 30 - Imagens e Sons da Amazônia</title> <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
-    <header>
-        <h1>Galeria</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="gallery.html">Galeria</a></li>
-                <li><a href="actions.html">Ações Sustentáveis</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">Galeria da COP 30</h1>
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a href="index.html" class="main-nav__link">Início</a></li>
+                    <li class="main-nav__item"><a href="about.html" class="main-nav__link">Sobre</a></li>
+                    <li class="main-nav__item"><a href="gallery.html" class="main-nav__link">Galeria</a></li>
+                    <li class="main-nav__item"><a href="actions.html" class="main-nav__link">Ações Sustentáveis</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-       <section id="gallery">
-            <h2>Galeria</h2>
-            <div class="image-container">
-                <a href="https://amazonia.org.br/#portfolio" target="blank">
-                    <img src="img/amazon-forest.jpg" alt="Floresta Amazônica">
+    <main class="main-content">
+        <section id="gallery" class="gallery-section"> <h2 class="gallery-section__title">Imagens da Amazônia</h2>
+            <div class="gallery-section__image-grid image-container"> <a href="https://amazonia.org.br/#portfolio" target="_blank" rel="noopener noreferrer" class="gallery-section__image-link">
+                    <img src="img/amazon-forest.jpg" alt="Vista aérea da densa floresta amazônica" class="gallery-section__image">
                 </a>
-                 <a href="https://brasilescola.uol.com.br/biologia/mudancas-climaticas.htm"target="blank">
-                    <img src="img/climate-change.jpg" alt="Mudanças Climáticas">
-		</a>
-                <a href="https://brasilescola.uol.com.br/brasil/o-indigena-no-brasil.htm#:~:text=Os%20povos%20indígenas%20são%20o,uma%20grande%20diversidade%20de%20etnias." target="blank">
-                    <img src="img/indigenous-people.jpg" alt="Povos Indígenas">
+                <a href="https://brasilescola.uol.com.br/biologia/mudancas-climaticas.htm" target="_blank" rel="noopener noreferrer" class="gallery-section__image-link">
+                    <img src="img/climate-change.jpg" alt="Imagem simbólica das mudanças climáticas, como seca ou poluição" class="gallery-section__image">
                 </a>
-                <a href="https://brasil.un.org/pt-br/156377-guia-para-cop26-o-que-é-preciso-saber-sobre-o-maior-evento-climático-do-mundo" target="blank">
-                    <img src="img/COP.jpg" alt="COP26">
+                <a href="https://brasilescola.uol.com.br/brasil/o-indigena-no-brasil.htm#:~:text=Os%20povos%20ind%C3%ADgenas%20s%C3%A3o%20o,uma%20grande%20diversidade%20de%20etnias." target="_blank" rel="noopener noreferrer" class="gallery-section__image-link">
+                    <img src="img/indigenous-people.jpg" alt="Pessoas indígenas em seu ambiente natural na Amazônia" class="gallery-section__image">
                 </a>
-                <a href="https://ispn.org.br/biomas/amazonia/estrategias-para-conservacao/" target="blank">
-                    <img src="img/sustainable-farming.jpg" alt="Agricultura Sustentável">
+                <a href="https://brasil.un.org/pt-br/156377-guia-para-cop26-o-que-é-preciso-saber-sobre-o-maior-evento-climático-do-mundo" target="_blank" rel="noopener noreferrer" class="gallery-section__image-link">
+                    <img src="img/COP.jpg" alt="Logo ou imagem representativa da Conferência das Partes (COP)" class="gallery-section__image">
+                </a>
+                <a href="https://ispn.org.br/biomas/amazonia/estrategias-para-conservacao/" target="_blank" rel="noopener noreferrer" class="gallery-section__image-link">
+                    <img src="img/sustainable-farming.jpg" alt="Agricultura sustentável ou práticas de conservação" class="gallery-section__image">
                 </a>
             </div>
-            <div class="audio-container">
-                <p><b>Ouça o som de um maraká indígena</b></p>
-                <audio controls>
+
+            <div class="gallery-section__audio-container audio-container"> <p class="gallery-section__audio-description"><strong>Ouça o som de um maraká indígena:</strong></p>
+                <audio controls class="gallery-section__audio-player">
                     <source src="audio/audiomaraca.mp3" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
                 </audio>
@@ -50,8 +49,11 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Wendel Henrique</p>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2024 Wendel Henrique</p>
+            <a href="#top" class="footer__back-to-top" aria-label="Voltar ao topo da página">Voltar ao Topo</a>
+        </div>
     </footer>
 </body>
 </html>
